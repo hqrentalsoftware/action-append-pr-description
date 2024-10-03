@@ -44,7 +44,7 @@ async function main() {
 
   const displayedMessage = message ? message : 'Deployed to:';
 
-  const updatedBody = `${body} \n\n ----- \n${displayedMessage} ${url}`;
+  const updatedBody = `${body}\n-${url}`;
 
   const updateResponse = await octokit
     .request('PATCH /repos/{owner}/{repo}/pulls/{pull_number}', {
